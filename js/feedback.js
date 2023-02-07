@@ -30,7 +30,6 @@ window.addEventListener("keydown", function (evt) {
 
 // SUBMIT DATA
 popupForm.addEventListener('submit', function(evt) {
-    //popupFeedback.classList.remove('popup-feedback--show');
     if (!popupFormLogin.value || !popupFormEmail.value || !popupFormMessage.value) {
         evt.preventDefault();
         popupFeedback.classList.remove('popup-error');

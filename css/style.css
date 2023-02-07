@@ -660,17 +660,11 @@ html body .visually-hidden {
     transform: scale(-1, 1);
 }
 
-/* для отражения по горизонтали используется scale, тк при повороте на 180дег возможны проблемы с выравниванием */
-
 .slider-dots {
     width: fit-content;
     margin: 0 auto;
     font-size: 0;
 }
-
-/* из-за наличия пробельных символов между кнопками в html, между ними появляется невидимый отступ.
-Задал контейнеру font-size: 0, тем самым как бы сделал этот пробел нулевого размера. Другие способы - записать обе кнопки в одну строку,
-или закомментировать отступ*/
 
 .slider-dots__btn {
     width: 10px;
@@ -851,9 +845,6 @@ html body .visually-hidden {
     overflow: hidden;
 }
 
-/*Благодаря overflow:hidden содержимое блока product-card, выходящее за его пределы,
-не отображается. Это нужно для стикера NEW*/
-
 .product-card:hover {
     box-shadow: 0 0 10px 0 #EAEAEA;
 }
@@ -981,9 +972,6 @@ html body .visually-hidden {
     border-color: var(--basic-grey);
     opacity: 0.5;
 }
-
-/* border-color продублирован, потому что если зажать кнопку и не отпуская клавиши отвести курсор,
-свойства :hover не будут учтены, т е рамка станет зеленой*/
 
 .product-card__description-wrap {
     grid-area: description;
@@ -1151,11 +1139,6 @@ html body .visually-hidden {
     padding: 50px 0 44px;
     position: relative;
     margin-bottom: 55px;
-
-    /* Для того, чтобы тень сохраняла свои пропорции вне зависимости от количества элементов,
-    блоку с кнопками задан верхний и нижний паддинги. Соответствующие длине верхнего и нижнего
-    выступа линии. Из-за верхнего паддинга блок уходит вниз, чтобы сохранить уравнивание с соседним
-    блоком, задан отрицательный верхний маргин*/
 }
 
 .services-nav::after {
@@ -1166,7 +1149,6 @@ html body .visually-hidden {
     top: 0;
     right: 0;
     background: no-repeat url("../img/shadow.png") 0 0 / 100% 100%;
-    /* background-position распознает, если есть "/" */
 
 }
 
@@ -2480,5 +2462,3 @@ html body .visually-hidden {
       transform: translateX(10px);
     }
   }
-
-/*определить где wrap где inner*/
